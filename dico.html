@@ -1,0 +1,90 @@
+<!--
+  
+    
+/*************************************************************************************************************************/
+/************************************Copyright © 2023-2024 DreamBelieveMake By Sawda**************************************/
+/*************************************************************************************************************************/
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Sawda">
+    <meta name="Description" content="Dictionnaire Jeu du pendu en ligne">
+    <meta name="keywords" content="Dictionnaire, Jeu, pendu, en ligne">
+    <title>Dictionnaire du jeu du pendu</title>
+    <link rel="icon" href="Logo tranparent.png">
+    <link rel="stylesheet" media="screen and (max-width: 769px)" href="style2-tel.css">
+    <link rel="stylesheet" media="screen and (min-width: 769px)" href="style-ordi.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="dictionnaire.js"> </script>
+</head>
+
+<body>
+
+    <header>
+        <div style="position: fixed; top: 0; background-color: white; width: 100%;">
+            <div style="text-align: left;">
+                <a href="https://dreambelievemake.com/"><img src="Logo2 transparent.png" alt="logo DBM" width="160px"
+                        height="50px"></a>
+            </div>
+            <div style="text-align: right; margin-right: 20px;">
+                <a href="index.html">
+                    <img src="icônehome.png" width="30px" height="30px" alt="Accueil"></a>
+            </div>
+        </div>
+        <h1 style="margin-top: 100px;" id="header">Dictionnaire du jeu du pendu</h1>
+    </header>
+
+    <main>
+        <div style="text-align: right;">
+            <input type="button" value="Réinitialiser le dictionnaire" id="refresh">
+        </div>
+        <p style="text-align: center;"><i>Il y a actuellement <span id="nbMotsDic"></span> mots dans le
+                dictionnaire.</i></p>
+        <div style="margin-bottom: 20px; margin-top: 20px;">
+            Pour ajouter un mot au dictionnaire :
+            <input type="button" value="Ajouter" id="ajoutDic">
+            <div id="pAjoutMotDic">
+                <p id="attention">Évitez les mots contenant des espaces, des apostrophes ou des traits d'union.
+                    Présentez
+                    les mots sous forme d'un seul mot.</p>
+                <p id="erreurChiffre">Évitez les chiffres</p>
+                <p id="erreurExiste">Ce mot existe déjà dans le dictionnaire</p>
+                <p>Saisissez le mot à ajouter, puis appuyez sur la touche Entrée : <input type="text" id="ajoutMotDic">
+                </p>
+            </div>
+        </div>
+        <div style="margin-bottom: 20px;">
+            Pour supprimer un mot du dictionnaire :
+            <input type="button" value="Supprimer" id="suppDic">
+            <div id="pSuppMotDic">
+                <p id="erreurExistePas">Ce mot n'existe pas dans le dictionnaire</p>
+                <p>Saisissez le mot à supprimer, puis appuyez sur la touche entrée : <input type="text" id="suppMotDic">
+                </p>
+            </div>
+        </div>
+        <p id="alerte"></p>
+        <p id="tableDico"></p>
+        <div id="footer"></div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <a href="#header">
+                <img src="allerenhaut.png" width="25px" height="25px" alt="header"></a>
+            <a href="#footer">
+                <img src="allerenbas.png" width="25px" height="25px" alt="footer"></a>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="dico.js"> </script>
+
+</body>
+
+</html>

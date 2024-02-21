@@ -1,0 +1,115 @@
+<!--
+  
+    
+/*************************************************************************************************************************/
+/************************************Copyright © 2023-2024 DreamBelieveMake By Sawda**************************************/
+/*************************************************************************************************************************/
+
+
+-->
+
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <META name="author" content="Sawda">
+    <meta name="Description" content="Jeu du pendu en ligne">
+    <meta name="keywords" content="Jeu, pendu, en ligne">
+    <title>Jeu du pendu en ligne</title>
+    <link rel="icon" href="Logo tranparent.png">
+
+    <link rel="stylesheet" media="screen and (max-width: 769px)" href="style2-tel.css">
+    <link rel="stylesheet" media="screen and (min-width: 769px)" href="style-ordi.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="dictionnaire.js"> </script>
+</head>
+
+<body onload="clickBoutonAlphabet()">
+
+    <header>
+        <div style="position: fixed; top: 0; background-color: white; width: 100%;">
+            <div style="text-align: left;">
+                <a href="https://dreambelievemake.com/"><img src="Logo2 transparent.png" alt="logo DBM" width="160px"
+                        height="50px"></a>
+            </div>
+            <div style="text-align: right; margin-right: 20px;">
+                <a href="index.html">
+                    <img src="icônehome.png" width="30px" height="30px" alt="Accueil"></a>
+            </div>
+        </div>
+        <h1 style="margin-top: 100px;" id="header">Bienvenue au jeu du pendu</h1>
+    </header>
+
+    <main>
+        <div style="text-align: left;">
+            <input type="button" value="Réinitialiser le score" id="refreshScore">
+        </div>
+        <div style="text-align: right;">
+            <input type="button" value="Réinitialiser le classement" id="refreshJoueurs">
+        </div>
+        <p id="scoreTable"></p>
+        <p class="center"><i>Partagez la capture d'écran de votre score avec nous sur les réseaux sociaux en utilisant
+                le hashtag #JeuDuPendu. Nous avons hâte de voir vos performances !</i></p>
+        <p>Le principe du jeu est le suivant :</p>
+        <ol>
+            <li>La machine choisit un mot que vous devez deviner en identifiant une à une les lettres qui le composent.
+            </li>
+            <li>Vous avez droit à un maximum de 7 erreurs. Donc vous disposez, au début, de 7 tentatives.</li>
+            <li>Vous devez appuyer sur le bouton <a href="#id">d'une lettre</a> pour la choisir.
+                <ol>
+                    <li><strong>Cas 1 :</strong> Si la lettre fait partie des lettres du mot, alors un ou plusieurs
+                        tirets seront remplacés par la lettre choisie. Dans ce cas, il vous reste toujours 7 tentatives.
+                    </li>
+                    <li><strong>Cas 2 :</strong> Sinon, le nombre de tentatives diminue. Dans ce cas, il vous reste 6
+                        tentatives.</li>
+                    <li><strong>Dans les deux cas</strong>, pour choisir une deuxième lettre, vous devez appuyer sur le
+                        <a href="#id">bouton</a>. Et le même schéma se répète jusqu'à la fin de la partie.
+                    </li>
+                </ol>
+            </li>
+            <li>Si vous trouvez toutes les lettres du mot avant la fin des 7 tentatives, alors vous avez gagné !</li>
+            <li id="id">Vous verrez l'image du pendu pour connaître le nombre d'essais restants. Amusez-vous bien !</li>
+        </ol>
+        <div style="text-align: center; font-weight: bold;">
+            <p id="motADeviner"> </p>
+            <p id="motADevinerNonTrouver">Le mot à deviner était : </p>
+            <p id="motADevinerTrouver">Bravo, le mot à deviner est bien : </p>
+            <p id="divMot"></p>
+        </div>
+        <span id="gain" class="vert">Vous avez gagné!</span>
+        <span id="perte" class="rouge">Vous avez perdu!</span>
+        <div id="positionFlex">
+            <img id="img">
+            <div id="divBouton"></div>
+            <input type="button" value="Rejouer" id="replay">
+        </div>
+        <p id="textNom">Félicitations, vous faites partie des 10 premiers. Veuillez saisir votre nom, puis cliquez sur
+            la touche Entrée : <input type="text" id="nom"></p>
+        <p><b>NB :</b> Vous ne pourrez inscrire votre nom dans le tableau que si vous parvenez à trouver le mot à
+            deviner et que vous faites partie des 10 premiers.</p>
+        <p id="joueurTable"></p>
+        <p>Saviez-vous que ce jeu peut également être bénéfique pour développer l’intelligence ?
+            Lisez cet <a href="https://dreambelievemake.com/le-jeu-du-pendu/">article</a>, pour explorer les nombreux
+            avantages que le jeu du pendu peut offrir pour stimuler votre cerveau et améliorer vos capacités cognitives.
+        </p>
+        <div id="footer"></div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <a href="#header">
+                <img src="allerenhaut.png" width="25px" height="25px" alt="header"></a>
+            <a href="#footer">
+                <img src="allerenbas.png" width="25px" height="25px" alt="footer"></a>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="script1.js"> </script>
+
+</body>
+
+</html>

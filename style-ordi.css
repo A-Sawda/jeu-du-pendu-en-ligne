@@ -1,0 +1,161 @@
+/*************************************************************************************************************************/
+/************************************Copyright © 2023-2024 DreamBelieveMake By Sawda**************************************/
+/*************************************************************************************************************************/
+
+div.footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+
+a {
+    color: rgb(218, 154, 181);
+    text-decoration: none;
+}
+
+#replay {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+#positionFlex {
+    display: flex;
+    flex-direction: row;
+}
+
+* {
+    font-size: 25px;
+    font-family: Arapey;
+}
+
+#img,
+#imgMachine {
+    width: 200px;
+    height: 200px;
+}
+
+.lemot {
+    text-align: center;
+    font-weight: bold;
+}
+
+h1 {
+    background-color: rgb(218, 154, 181);
+    text-align: center;
+    font-size: 35px;
+}
+
+.center {
+    text-align: center;
+}
+
+#erreur,
+#erreurChiffre,
+#erreurExiste,
+#erreurExistePas {
+    color: rgb(255, 0, 0);
+}
+
+
+/* #tdgainTMachine, #tdgainT{
+    background-color:rgb(0, 255, 0);
+    color: black;
+    font-weight: bold;
+}
+
+#tdperteTMachine, #tdperteT{
+    background-color:rgb(255, 0, 0);
+    color: black;
+    font-weight: bold;
+}
+
+#tdpenaliteTMachine, #tdpenaliteT{
+    background-color:rgb(255,165,0);
+    color: black;
+    font-weight: bold;
+} */
+
+#nbgain1,
+#nbgain2 {
+    background-color: rgb(0, 255, 0);
+    color: black;
+    font-weight: bold;
+}
+
+#nbperte1,
+#nbperte2 {
+    background-color: rgb(255, 0, 0);
+    color: black;
+    font-weight: bold;
+}
+
+#nbpen1,
+#nbpen2 {
+    background-color: rgb(255, 165, 0);
+    color: black;
+    font-weight: bold;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+th {
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgb(126, 26, 81);
+    color: white;
+}
+
+p,
+span {
+    color: black;
+}
+
+input {
+    background-color: rgb(238, 241, 241);
+    border: 1px solid rgb(7, 7, 7);
+    color: rgb(196, 81, 81);
+    font-weight: bold;
+    text-align: center;
+}
+
+#nbMotsDic {
+    color: rgb(196, 81, 81);
+}
+
+button {
+    background-color: rgb(100, 8, 65);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+#alerte {
+    color: rgb(13, 138, 13);
+    text-align: center;
+}
+
+#attention {
+    color: rgb(255, 165, 0);
+}
+
+.vert {
+    color: rgb(0, 255, 0);
+}
+
+.rouge {
+    color: rgb(255, 0, 0);
+}

@@ -1,0 +1,101 @@
+<!--
+  
+    
+/*************************************************************************************************************************/
+/************************************Copyright © 2023-2024 DreamBelieveMake By Sawda**************************************/
+/*************************************************************************************************************************/
+
+
+-->
+
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <META name="author" content="Sawda">
+    <meta name="Description" content="Jeu du pendu en ligne">
+    <meta name="keywords" content="Jeu, pendu, en ligne">
+    <title>Jeu du pendu en ligne</title>
+    <link rel="icon" href="Logo tranparent.png">
+    <link rel="stylesheet" media="screen and (max-width: 769px)" href="style2-tel.css">
+    <link rel="stylesheet" media="screen and (min-width: 769px)" href="style-ordi.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="dictionnaire.js"> </script>
+
+</head>
+
+<body>
+
+    <header>
+        <div style="position: fixed; top: 0; background-color: white; width: 100%;">
+            <div style="text-align: left;">
+                <a href="https://dreambelievemake.com/"><img src="Logo2 transparent.png" alt="logo DBM" width="160px"
+                        height="50px"></a>
+            </div>
+            <div style="text-align: right; margin-right: 20px;">
+                <a href="index.html"><img src="icônehome.png" width="30px" height="30px" alt="Accueil"></a>
+            </div>
+        </div>
+        <h1 style="margin-top: 100px;" id="header">Bienvenue au jeu du pendu</h1>
+    </header>
+
+    <main>
+        <div style="text-align: right;">
+            <input type="button" value="Réinitialiser le score" id="refresh">
+        </div>
+        <p id="scoreMachineTable"></p>
+        <p>Dans cette version, c'est à la machine de deviner le mot que vous allez choisir. Choisissez un mot parmi ceux
+            du dictionnaire ci-dessous, puis appuyez sur la touche Entrée : <input type="text" id="motSaisiHom" /></p>
+        <p id="erreur">Erreur ! Veuillez choisir un mot parmi ceux du dictionnaire, s'il vous plaît.</p>
+        <div id="lestirets">
+            <p>Le principe du jeu est le suivant : la machine dispose au début de 7 tentatives.</p>
+            <p>Appuyez sur le bouton « <a href="#id">Faire choisir un mot à la machine</a> » pour que la machine
+                choisisse un mot.</p>
+            <ol>
+                <li>Si le mot que la machine choisit est le bon, alors elle a gagné ;</li>
+                <li>Sinon, elle va choisir une lettre dans le mot qu'elle a choisi.
+                    <ol>
+                        <li><strong>Cas 1 :</strong> Si la lettre fait partie des lettres de votre mot, alors un ou
+                            plusieurs tirets seront remplacés par la lettre choisie. Dans ce cas, il lui reste toujours
+                            7 tentatives.</li>
+                        <li><strong>Cas 2 :</strong> Sinon, le nombre de tentatives diminue. Dans ce cas, il lui reste 6
+                            tentatives.</li>
+                        <li id="id"><strong>Dans les deux cas</strong>, pour lui faire choisir un deuxième mot, vous
+                            devez appuyer sur le
+                            bouton « <a href="#id">Faire choisir un mot à la machine</a> ».
+                            Et le même schéma se répète jusqu'à la fin de la partie.</li>
+                    </ol>
+                </li>
+                <li>Vous verrez l'image du pendu pour connaître le nombre d'essais restants. Amusez-vous bien !
+                </li>
+            </ol>
+            <input type="button" value="Faire choisir un mot à la machine" id="jouerMachine">
+            <p> Mot à deviner : <span id="divMotMachine"></span> </p>
+        </div>
+        <span id="gainMachine" class="vert"> La machine a gagné! </span>
+        <span id="perteMachine" class="rouge"> La machine a perdu! </span>
+        <div id="positionFlex">
+            <img id="imgMachine">
+            <input type="button" value="Rejouer" id="replay" />
+        </div>
+        <p id="idTableDico"></p>
+        <div id="footer"></div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <a href="#header">
+                <img src="allerenhaut.png" width="25px" height="25px" alt="header"></a>
+            <a href="#footer">
+                <img src="allerenbas.png" width="25px" height="25px" alt="footer"></a>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="script2.js"> </script>
+
+</body>
+
+</html>
